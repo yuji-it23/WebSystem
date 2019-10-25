@@ -1,0 +1,4 @@
+#GlassFish 3
+#Fri Oct 25 14:46:22 JST 2019
+org.eclipse.jst.jee.server\:T-OKADA1=C\:\\glassfish5\\glassfish\\domains\\domain1\\eclipseApps\\T-OKADA1
+org.eclipse.jst.jee.server\:javaeee2=C\:\\glassfish5\\glassfish\\domains\\domain1\\eclipseApps\\javaeee2
