@@ -1,0 +1,297 @@
+body{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+main{
+  min-height: 100vh;
+  display: flex;
+}
+.topNavigation{
+  height:50px;
+  width:100%;
+  border-bottom: solid black 2px;
+}
+.sideNavigation{
+  width: 250px;
+  text-align: center;
+  background-color: white;
+  color: #fff;
+}
+.content{
+  flex: 1;
+  background-color: #eee;
+  text-align: center;
+}
+
+.box1{
+  width: auto;
+  height: 50px;
+  background-color: #f9f9f9;
+  border-left: solid black 2px;
+  border-bottom: solid black 2px;
+}
+.box2{
+  width: auto;
+  height: 50px;
+  background-color: #f9f9f9;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #646464;
+  font-size: 30px;
+  color: black;
+  text-align: left;
+}
+.box3{
+  width: auto;
+  height: 200px;
+  margin-top: -30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+  border-style: solid;
+  border-color: #646464;
+  border-radius: 10px;
+}
+.box4{
+  width: auto;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 100px;
+  background-color: white;
+  border-style: solid;
+  border-color: #646464;
+  border-radius: 10px;
+}
+.home_b{
+  width: 100%;
+  height: 55px;
+  border: 0;
+  background: none;
+  font-size: 37px;
+  color: black;
+  border-bottom: solid black 2px;
+  outline: none;
+  padding-left: 75px;
+}
+.home_b_img{
+  width: 45px;
+  height: 40px;
+  position: relative;
+  top: 8px;
+  right: 170px;
+}
+.home_b:hover{
+  background: #646464;
+  color: white;
+}
+.attendance_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.attendance_b:hover{
+  background: #646464;
+  color: white;
+}
+.student_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.student_b:hover{
+  background: #646464;
+  color: white;
+}
+.teacher_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.teacher_b:hover{
+  background: #646464;
+  color: white;
+}
+.class_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.class_b:hover{
+  background: #646464;
+  color: white;
+}
+.classwork_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.classwork_b:hover{
+  background: #646464;
+  color: white;
+}
+.classroom_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.classroom_b:hover{
+  background: #646464;
+  color: white;
+}
+.subject_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: black;
+  outline: none;
+}
+.subject_b:hover{
+  background: #646464;
+  color: white;
+}
+.buttonWrapper{
+  display: block;
+  position: relative;
+  text-align: right;
+  bottom: 45px;
+}
+.Registration_b{
+  width: 140px;
+  height: 50px;
+  border: 0;
+  background-color: none;
+  background-color: #323232;
+  font-size: 37px;
+  color: black;
+  outline: none;
+  text-align: right;
+  border-radius: 10px;
+}
+.Registration_b_img{
+  width: 45px;
+  height: 40px;
+  position: relative;
+  bottom: 45px;
+  right: 75px;
+  outline: none;
+}
+.Registration_b:hover{
+  background: #646464;
+  color: white;
+}
+.graduate_b{
+  width: 210px;
+  height: 50px;
+  border: 0;
+  background-color: none;
+  background-color: #323232;
+  font-size: 37px;
+  color: black;
+  outline: none;
+  text-align: right;
+  border-radius: 10px;
+  margin-left: -9px;
+}
+.graduate_b_img{
+  width: 45px;
+  height: 40px;
+  position: relative;
+  bottom: 45px;
+  right: 150px;
+  outline: none;
+}
+.graduate_b:hover{
+  background: #646464;
+  color: white;
+}
+.logout_b{
+  width: 180px;
+  height: 50px;
+  border: 0;
+  background-color: none;
+  background-color: #323232;
+  font-size: 30px;
+  color: black;
+  outline: none;
+  border-radius: 10px;
+  float: right;
+}
+.logout_b:hover{
+  background: #646464;
+  color: white;
+}
+table{
+  width: 100%;
+}
+th{
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+th:first-child{
+  border-right: 1px solid black;
+}
+td{
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+td:first-child{
+  border-right: 1px solid black;
+}
+ol.topic-path {
+  margin: 0px;
+  padding: 14px 5px;
+  list-style-type: none; /* リストマーク非表示 */
+  font-size: 100%; /* 文字サイズ */
+  float: left;
+}
+/* リスト項目 */
+ol.topic-path li {
+  display: inline; /* 項目を横並び */
+}
+/* リスト項目（最初の項目） */
+ol.topic-path li.first {
+  padding-left: 25px;
+  background: url(../image/topic-path-home-gray.png) no-repeat left; /* ホーム記号（※） */
+}
+/* リンクエリア */
+ol.topic-path li a {
+  padding-right: 18px; /* 右パディング */
+  background: url(../image/topic-path-gray.gif) no-repeat right; /* 矢印記号（※） */
+}
+/* リンク色 */
+ol.topic-path li a {
+  color: #4682b4;
+}
+/* リンク色（マウスオーバー） */
+ol.topic-path li a:hover {
+  color: #79a7cc;
+}
+div.hid{
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #FF9999;
+}
