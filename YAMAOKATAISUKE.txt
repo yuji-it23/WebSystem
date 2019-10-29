@@ -1,0 +1,8 @@
+EL文で分岐
+room.jsp
+1.submitでbeansにTRUEを送信させる
+2.受け取ったデータでSQL文を組み立て
+3.受け取ったデータベースを関数に代入
+4.table.jspにデータベースを突っ込んだテーブルを生成
+5.room.jspをリロード。TRUEならばEL文のC:ifの部分が読み込まれる
+6.include.jspでtable.jspを読み込む。
