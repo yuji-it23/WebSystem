@@ -1,7 +1,7 @@
 // idが"search_studentInfo"のbuttonをclick時イベント
 window.addEventListener("load",function(){
     document.getElementById("search_studentInfo").addEventListener("click",function(){
-        var formDatas = document.getElementById("studentInfo");
+        var formDatas = document.getElementById("roomInfo");
         var postDatas = new FormData(formDatas);
 
         var XHR = new XMLHttpRequest();

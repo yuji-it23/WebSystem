@@ -1,5 +1,4 @@
 <?php
-$if = 1;
 $oraid = 'web';
 $orapw = 'oic';
 $oraConnString = '172.24.39.108:1521/Attendances.srv.oic';
@@ -26,6 +25,27 @@ while ($row = oci_fetch_array($statementId, OCI_ASSOC+OCI_RETURN_NULLS)) {
      $array = array_merge($array, array($item));
  }
 }
+$array = array_merge($array, array(""));
+
+$sqlString = 
+'SELECT
+substr(m_classroom_id,1,1)
+FROM
+m_classroom
+GROUP BY
+substr(m_classroom_id,1,1)
+ORDER BY 
+substr(m_classroom_id,1,1) ASC
+';
+
+$statementId = oci_parse($oraConn, $sqlString);
+oci_execute($statementId);
+while ($row = oci_fetch_array($statementId, OCI_ASSOC+OCI_RETURN_NULLS)) {
+ foreach ($row as $item) {
+     $array = array_merge($array, array($item));
+ }
+}
+
 // リソースの開放
 oci_free_statement($statementId);
 

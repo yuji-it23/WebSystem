@@ -10,7 +10,7 @@ if (!$oraConn) {
  $e = oci_error();
  trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
-$sqlString = 'SELECT m_c.m_classroom_id, m_c.m_classroomform_id, m_cf.m_classroom_name FROM m_classroom m_c JOIN m_classroomform m_cf ON m_c.m_classroomform_id = m_cf.m_classroomform_id';
+$sqlString = 'SELECT m_c.m_classroom_id, m_c.m_classroomform_id, m_cf.m_classroom_name FROM m_classroom m_c JOIN m_classroomform m_cf ON m_c.m_classroomform_id = m_cf.m_classroomform_id' WHERE ;
 $statementId = oci_parse($oraConn, $sqlString);
 oci_execute($statementId);
 $array = array();

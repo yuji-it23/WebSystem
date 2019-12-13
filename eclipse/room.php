@@ -35,15 +35,13 @@ require('../Layout/Layout.php');
         <div class="searchbox_txtwrapper">
             <p class="searchbox_txt1">検索項目</p>
             <p class="searchbox_txt2">教室タイプ
-              <select name="a" id="roomtype">
+              <select id="roomtype">
                 <option value="roomtypeAll">項目選択</option>
               </select>
             </p>
             <p class="searchbox_txt3">階層
-              <select name="a" id="select">
-                <option value="サンプル1">サンプル1</option>
-                <option value="サンプル2">サンプル2</option>
-                <option value="サンプル3">サンプル3</option>
+              <select id="floor">
+              <option value="floorAll">項目選択</option>
               </select>
             </p>
 
