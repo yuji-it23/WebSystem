@@ -1,6 +1,4 @@
 <?php
-$text = $_POST['a'];
-$if = 1;
 $oraid = 'web';
 $orapw = 'oic';
 $oraConnString = '172.24.39.108:1521/Attendances.srv.oic';
@@ -10,9 +8,28 @@ if (!$oraConn) {
  $e = oci_error();
  trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
-$sqlString = 'SELECT m_c.m_classroom_id, m_c.m_classroomform_id, m_cf.m_classroom_name FROM m_classroom m_c JOIN m_classroomform m_cf ON m_c.m_classroomform_id = m_cf.m_classroomform_id' WHERE ;
+
+$roomtype = 'RF02';
+$floor = '3';
+
+$sqlString = 'SELECT m_c.m_classroom_id, m_c.m_classroomform_id, m_cf.m_classroom_name 
+FROM m_classroom m_c JOIN m_classroomform m_cf ON m_c.m_classroomform_id = m_cf.m_classroomform_id ';
+$sqlString .= 'WHERE m_c.m_classroomform_id = ';
+$sqlString .= ':roomtype' ;
+$sqlString .= ' AND ' ;
+$sqlString .= 'm_c.m_classroom_id LIKE ';
+$sqlString .= "'";
+$sqlString .= ':floor';
+$sqlString .= '%';
+$sqlString .= "'";
 $statementId = oci_parse($oraConn, $sqlString);
+echo $sqlString;
+
+oci_bind_by_name($statementId, ":roomtype", $roomtype);
+oci_bind_by_name($statementId, ":floor", $floor);
+
 oci_execute($statementId);
+
 $array = array();
 while ($row = oci_fetch_array($statementId, OCI_ASSOC+OCI_RETURN_NULLS)) {
  foreach ($row as $item) {
