@@ -2,14 +2,20 @@
 window.addEventListener("load",function(){
     document.getElementById("search_studentInfo").addEventListener("click",function(){
         var formDatas = document.getElementById("roomInfo");
-        var postDatas = new FormData(formDatas);
-
+        var postData = new FormData();
+        var roomtype = document.getElementById('roomtype').value.split(' | ');
+        var roomtypea = roomtype[1].substring(0, 4);
+        var floor = document.getElementById('floor').value + '%';
         var XHR = new XMLHttpRequest();
+        console.log(floor);
+        postData.append('roomtype', roomtypea);
+
+        postData.append('floor', floor);
 
         // 生徒の検索(DB接続)を行うphpファイルを呼び出す
         XHR.open("POST","./php/db/room.php",true);
 
-        XHR.send(postDatas);
+        XHR.send(postData);
 
         XHR.onreadystatechange = function(){
          if(XHR.readyState == 4 && XHR.status == 200){
@@ -23,9 +29,9 @@ window.addEventListener("load",function(){
 
 
                 // dbから取得したデータを格納していく
-                for (let i=0,l=studentDate.length; i<l; i++) {
+                for (let i=0,l=studentDate.length; i<l; i+=3) {
                     studentData.push({m_classroom_id:studentDate[i],m_classroomform_id:studentDate[i+1],m_classroom_name:studentDate[i+2]});
-                    i += 2;//次のデータへいく
+                    //i += 2;//次のデータへいく
 
                 }
                 // データ配列をjqGrid用配列に格納
